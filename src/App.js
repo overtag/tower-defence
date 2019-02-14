@@ -58,8 +58,6 @@ export class App {
     this.core = new Core();
     this.core.visible = true;
     this.app.stage.addChild(this.core);
-    this.controller = new Controller();
-    this.controller.init();
 
 		/*this.resize();
     window.addEventListener('resize', this.resize.bind(this));

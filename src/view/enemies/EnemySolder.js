@@ -1,6 +1,9 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../../config';
 import {EnemyBase} from './EnemyBase';
+import { Avector } from '../../utils/Avector';
+import { Amath  } from '../../utils/Amath';
+import {Game} from '../Game'
 
 export class EnemySolder extends EnemyBase {
     constructor(universe) {
@@ -18,7 +21,7 @@ export class EnemySolder extends EnemyBase {
         graphics.endFill();
     
         return graphics;
-      }
+    }
 
     free() {
         if (!this.isFree) {
@@ -34,26 +37,30 @@ export class EnemySolder extends EnemyBase {
         this.defSpeed = 30;
         this.health = 0.6;
         this.isFree = false;
-        this.speedX = 1;
-        this.speedY = 1;
 
         super.init(posX, posY, targetX, targetY);
     }
 
     update(delta) {
         if  (this._isWay) {
-            this.x = this._wayTarget.x * config.MAP_CELL_SIZE + config.MAP_CELL_HALF;
-            this.y = this._wayTarget.y * config.MAP_CELL_SIZE + config.MAP_CELL_HALF;
+            
+            _calcDelay++;  
+            this.x += this._speed.x * delta;
+            this.y += this._speed.y * delta;
 
-            this._position.x = Math.floor(this.x / config.MAP_CELL_SIZE) + config.MAP_CELL_HALF;
-            this._position.y = Math.floor(this.x / config.MAP_CELL_SIZE) + config.MAP_CELL_HALF;;
-            this._wayIndex++;
-            if ( this._wayIndex === this._way.length) {
-                this._isWay = false;
-            } else {
-                this._wayTarget = this._way[this._wayIndex];
+            const cp = new Avector(this.x, this.y);
+            const _ax = Game.toPix(this._wayTarget.x);
+            const _ay = Game.toPix(this._wayTarget.y);
+            const tp = new Avector(_ax, _ay); 
+           
+            if (cp.equal(tp, 15)) {
+                this._position.x = Game.toTile(this.x);
+                this._position.y = Game.toTile(this.y);
+                this._wayIndex++;
+                this.setNextTarget();
             }
-
         }
     }
 }  
+
+let _calcDelay = 0;

@@ -1,6 +1,9 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../../config';
 import {PathFinder} from '../../utils/PathFinder'
+import {Avector} from '../../utils/Avector'
+import {Amath} from '../../utils/Amath'
+import {Game} from '../Game'
 
 export class EnemyBase extends PIXI.Container {
   static KIND_NONE () {return -1;} 
@@ -13,8 +16,9 @@ export class EnemyBase extends PIXI.Container {
 
     this.kind = EnemyBase.KIND_NONE;
     this.health = 0;
-    this.speadX = 0;
-    this.speadY = 0;
+    this._defSpeed = 1;
+    this._speed = new Avector(1, 1);
+    this._targetPos = new Avector(1, 1);
     this.sprite = null;
     this.isFree = false;
 
@@ -23,6 +27,34 @@ export class EnemyBase extends PIXI.Container {
     this.isDead = false;
   }
 
+  createCircle() {
+    const graphics = new PIXI.Graphics();
+    graphics.beginFill(0xFFCC00);
+    graphics.drawCircle(-2.5, -2.5, 5, 5);
+    graphics.endFill();
+
+    return graphics;
+}
+
+  setNextTarget() {
+			if (this._wayIndex == this._way.length) {
+				this._isWay = false;
+			} else {
+				// Новая цель
+        this._wayTarget = this._way[this._wayIndex];
+				this._targetPos.set(Game.toPix(this._wayTarget.x), Game.toPix(this._wayTarget.y));
+				this._targetPos.x += Amath.random(-10, 10);
+				this._targetPos.y += Amath.random(-10, 10);
+				// Расчет угла между текущими координатами и следующей точкой
+				var angle = Amath.getAngle(this.x, this.y, this._targetPos.x, this._targetPos.y);
+				//this._newAngle = Amath.toDegrees(Amath.getAngle(x, y, this._targetPos.x, this._targetPos.y));
+				
+				// Установка новой скорости
+				this._speed.asSpeed(this._defSpeed, angle);
+				// Разворот спрайта
+				this.sprite.rotation = Amath.toDegrees(angle);
+			}
+		}
 
   free() {
     if (this.sprite != null) {
@@ -46,13 +78,12 @@ export class EnemyBase extends PIXI.Container {
     } else	{
 				this._isWay = true;
 				this._wayIndex = 0; // Текущий шаг
-				this._wayTarget = this._way[this._wayIndex];
+        this.setNextTarget();
 			}
   }
 
   update(delta) {
-    this.x += _speedX * delta;
-    this.y += _speedY * delta;
+
   }
 
   kind() {

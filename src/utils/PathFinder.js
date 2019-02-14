@@ -44,13 +44,11 @@ export class PathFinder {
             
 
             if (this._mapMask[start.y][start.x] === WATER_KEY) {
-                console.log("getWay")
                 return this.getWay(start, end);
             }
             
             counter++;
         }
-        console.log(this._mapMask)
 
         return [];
     }
@@ -65,21 +63,18 @@ export class PathFinder {
         }
         
         if (this.inMap(ax + 1, ay) && this._mapMask[ay][ax + 1] === this._freeCell) { 
-            console.log("goWater1")
             this._mapMask[ay][ax + 1] = WATER_KEY;
             (this._mapDirs[ay][ax + 1]).x = ax;
             (this._mapDirs[ay][ax + 1]).y = ay;
         }
 
         if (this.inMap(ax, ay + 1) && this._mapMask[ay + 1][ax] === this._freeCell) {
-            console.log("goWater2")
             this._mapMask[ay + 1][ax] = WATER_KEY;
             (this._mapDirs[ay + 1][ax]).x = ax;
             (this._mapDirs[ay + 1][ax]).y = ay;
         }
             
         if (this.inMap(ax - 1, ay) && this._mapMask[ay][ax - 1] === this._freeCell) {
-            console.log("goWater3")
             this._mapMask[ay][ax - 1] = WATER_KEY;
             (this._mapDirs[ay][ax - 1]).x = ax;
             (this._mapDirs[ay][ax - 1]).y = ay;

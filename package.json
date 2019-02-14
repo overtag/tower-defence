@@ -1,6 +1,6 @@
 {
-  "name": "deputy",
-  "version": "0.0.7",
+  "name": "tower-defence",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -2,9 +2,6 @@ import *as PIXI from 'pixi.js';
 import {config} from '../config.js';
 import {Game} from './Game.js';
 
-// import {Core} from './view/Core.js';
-// import {Controller} from './Controller.js';
-
 export class Core extends PIXI.Container {
 	constructor() {
 		super();

@@ -2,6 +2,7 @@ import *as PIXI from 'pixi.js';
 import {config} from '../config';
 import {PathFinder} from '../utils/PathFinder'
 import {EnemySolder} from './enemies/EnemySolder';
+import { GunTower } from './towers/GunTower';
 
 const STATE_CELL_FREE = 0;
 const STATE_CELL_BUSY = 1;
@@ -49,6 +50,13 @@ export class Game extends PIXI.Container {
     //this.addChild(this.createRectangle());
 
     this.pf = new PathFinder(this.mapMask);
+
+    const tower = new GunTower(this);
+    tower.init(2, 1);
+  }
+
+  getEnemies() {
+    return listOfEnemies;
   }
 
   newEnemy() {
@@ -59,27 +67,41 @@ export class Game extends PIXI.Container {
   enterFrame(time) {  
     tick++
     listOfEnemies.forEach((_enemy, index) => {
-      console.log("ef", tick);
-      if (tick >= 20) {
         _enemy.update(1);
-        tick = 0;
-        
-      }
-      
+    });  
 
+    listOfTowers.forEach((_enemy, index) => {
+      _enemy.update(1);
     });  
   }
 
   addEnemy(enemy) {
     this.addChild(enemy);
     listOfEnemies.push(enemy);
+
+
   }
 
   removeEnemy(enemy) {
     this.removeChild(enemy);
     listOfEnemies.forEach((_enemy, index) => {
       if (enemy === _enemy) {
-        listOfBullets.splice(index, 1);
+        listOfEnemies.splice(index, 1);
+        return;
+      }
+    });
+  }
+
+  addTower(enemy) {
+    this.addChild(enemy);
+    listOfEnemies.push(enemy);
+  }
+
+  removeTower(enemy) {
+    this.removeChild(enemy);
+    listOfTowers.forEach((_enemy, index) => {
+      if (enemy === _enemy) {
+        listOfTowers.splice(index, 1);
         return;
       }
     });
@@ -89,7 +111,6 @@ export class Game extends PIXI.Container {
     let posX = 0;
     let posY = 0;
 
-    console.log(this.mapMask.length, this.mapMask[0].length)
     for (var ay = 0; ay < this.mapMask.length; ay++) {
       this.mapCell.push([]);
       for (var ax = 0; ax < this.mapMask[ay].length; ax++) {
@@ -116,7 +137,6 @@ export class Game extends PIXI.Container {
   }
 
   createRectangle(type) {
-    console.log('TYPE', type)
     const color = ['0x808080', '0x008000'];
     const graphics = new PIXI.Graphics();
     graphics.beginFill(color[type]);
@@ -132,6 +152,20 @@ export class Game extends PIXI.Container {
 
   setCellState(ax, ay, state) {
     this.mapMask[ay][ax] = state;
+  }
+
+  /**
+   * Переводит значение из пикселей в тайлы.
+   */
+  static toTile(value) {
+    return Math.floor(value / config.MAP_CELL_SIZE);
+  }
+  
+  /**
+   * Переводит значение из тайлов в пиксели.
+   */
+  static toPix(value) {
+    return config.MAP_CELL_HALF + value * config.MAP_CELL_SIZE;
   }
 }  
 
