@@ -14,6 +14,16 @@ export class EnemySolder extends EnemyBase {
         this.sprite = this.createRectangle();
     }
 
+    addDamage(damage) {
+        this._health -= damage;
+
+        if (this._health <= 0) {
+            this.isDead = true;
+            setTimeout(()=> {this.free()}, 600);
+            
+        }
+    }
+
     createRectangle() {
         const graphics = new PIXI.Graphics();
         graphics.beginFill(0xFFFFFF);
@@ -23,21 +33,12 @@ export class EnemySolder extends EnemyBase {
         return graphics;
     }
 
-    free() {
-        if (!this.isFree) {
-            // Вовращаем юнита в кэш
-            this.universe.cacheEnemySoldier.set(this);
-            super.free();
-            this.isFree = true;
-        }
-    }
-
     init(posX, posY, targetX, targetY) {
         this.kind = EnemyBase.KIND_SOLDIER;
         this.defSpeed = 30;
         this.health = 0.6;
         this.isFree = false;
-
+        this._health = 1;
         super.init(posX, posY, targetX, targetY);
     }
 

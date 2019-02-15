@@ -21,10 +21,15 @@ export class EnemyBase extends PIXI.Container {
     this._targetPos = new Avector(1, 1);
     this.sprite = null;
     this.isFree = false;
+    this._health = 1;
 
 
     this.universe = universe;
     this.isDead = false;
+  }
+
+  addDamage(damage) {
+
   }
 
   createCircle() {
@@ -58,11 +63,18 @@ export class EnemyBase extends PIXI.Container {
 
   free() {
     if (this.sprite != null) {
-      this.universe.removeChild(this.sprite);
+      const enemies = this.universe.getEnemies();
+      enemies.forEach((enemy, index) => {
+        if (enemy === this) {
+            return enemies.splice(index, 1);
+        }
+      })
+      this.universe.removeChild(this);
     }
   }
 
   init(posX, posY, targetX, targetY) {
+    this.isDead = false;
     if (this.sprite != null) {
       this.addChild(this.sprite);
     }  

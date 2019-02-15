@@ -6,5 +6,7 @@ export const config = {
 	'MAP_WIDTH_MAX':20,
 	'MAP_HEIGHT_MAX': 15,
 	'MAP_CELL_SIZE': 32,
-	'MAP_CELL_HALF': 16
+	'MAP_CELL_HALF': 16,
+	'STATE_IDLE': 1,
+ 	'STATE_ATTACK': 2
 }

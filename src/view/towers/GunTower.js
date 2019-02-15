@@ -1,5 +1,6 @@
 import { Avector } from "../../utils/Avector";
 import { TowerBase } from "./TowerBase";
+import { GunBullet } from "../bullet/GunBullet";
 
 export class GunTower extends TowerBase {
     constructor(universe) {
@@ -29,6 +30,12 @@ export class GunTower extends TowerBase {
         graphics.endFill();
     
         return graphics;
+    }
+
+    shoot() {
+        const bullet = new GunBullet(this.universe);
+        bullet.damage = this._attackDamage;
+        bullet.init(this.x, this.y, this._bulletSpeed, this._head.rotation )
     }
 }    
 

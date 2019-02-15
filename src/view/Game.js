@@ -59,6 +59,10 @@ export class Game extends PIXI.Container {
     return listOfEnemies;
   }
 
+  getBullets() {
+    return listOfBullets;
+  }
+
   newEnemy() {
     const solder = new EnemySolder(this);
     solder.init(0, 0, this.mapMask[0].length-1, this.mapMask.length-1);
@@ -73,13 +77,15 @@ export class Game extends PIXI.Container {
     listOfTowers.forEach((_enemy, index) => {
       _enemy.update(1);
     });  
+
+    listOfBullets.forEach((_enemy, index) => {
+      _enemy.update(1);
+    }); 
   }
 
   addEnemy(enemy) {
     this.addChild(enemy);
     listOfEnemies.push(enemy);
-
-
   }
 
   removeEnemy(enemy) {
@@ -94,7 +100,7 @@ export class Game extends PIXI.Container {
 
   addTower(enemy) {
     this.addChild(enemy);
-    listOfEnemies.push(enemy);
+    listOfTowers.push(enemy);
   }
 
   removeTower(enemy) {
