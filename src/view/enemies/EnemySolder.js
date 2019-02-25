@@ -1,9 +1,12 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../../config';
-import {EnemyBase} from './EnemyBase';
 import { Avector } from '../../utils/Avector';
 import { Amath  } from '../../utils/Amath';
 import {Game} from '../Game'
+import {EnemyBase} from './EnemyBase';
+import HealthPoint from '../HealthPoint';
+
+const MAX_HEALTH = 10;
 
 export class EnemySolder extends EnemyBase {
     constructor(universe) {
@@ -12,33 +15,30 @@ export class EnemySolder extends EnemyBase {
         this.isAttaked = false;
         this.calcDelay = 0;
         this.sprite = this.createRectangle();
+        this.addChild(this.sprite);
+
+        this.hpBar = new HealthPoint();
+        this.addChild(this.hpBar);
+        this.hpBar.y = -this.sprite.height / 2 - 2
+
     }
 
     addDamage(damage) {
+        console.log("addDamage", this._health, damage)
         this._health -= damage;
-
+        this.hpBar.update(MAX_HEALTH, this._health)
         if (this._health <= 0) {
             this.isDead = true;
-            setTimeout(()=> {this.free()}, 600);
-            
+            setTimeout(()=> {this.free()}, 600);   
         }
-    }
-
-    createRectangle() {
-        const graphics = new PIXI.Graphics();
-        graphics.beginFill(0xFFFFFF);
-        graphics.drawCircle(0, 0, 15, 15);
-        graphics.endFill();
-    
-        return graphics;
     }
 
     init(posX, posY, targetX, targetY) {
         this.kind = EnemyBase.KIND_SOLDIER;
-        this.defSpeed = 30;
-        this.health = 0.6;
+        this._defSpeed = 0.4;
+        this._health = MAX_HEALTH;
         this.isFree = false;
-        this._health = 1;
+        this.hpBar.init();
         super.init(posX, posY, targetX, targetY);
     }
 

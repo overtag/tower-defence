@@ -3,8 +3,8 @@ import { Amath } from "../../utils/Amath";
 import { BulletBase } from "./BulletBase";
 
 export class GunBullet extends BulletBase {
-    constructor(universe) {
-        super(universe);
+    constructor(universe, damage) {
+        super(universe, damage);
     }
 
     init(ax, ay, speed, angle) {
@@ -15,7 +15,7 @@ export class GunBullet extends BulletBase {
     createRect() {
         const graphics = new PIXI.Graphics();
         graphics.beginFill(0xCCCCCC);
-        graphics.drawRect(-1, -2, 2, 4);
+        graphics.drawRect(-2, -1, 4, 2);
         graphics.endFill();
     
         return graphics;

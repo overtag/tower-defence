@@ -5,6 +5,7 @@ import {Avector} from '../../utils/Avector'
 import {Amath} from '../../utils/Amath'
 import {Game} from '../Game'
 
+
 export class EnemyBase extends PIXI.Container {
   static KIND_NONE () {return -1;} 
   static KIND_SOLDIER () {return 0;} 
@@ -15,31 +16,16 @@ export class EnemyBase extends PIXI.Container {
     super();
 
     this.kind = EnemyBase.KIND_NONE;
-    this.health = 0;
-    this._defSpeed = 1;
     this._speed = new Avector(1, 1);
     this._targetPos = new Avector(1, 1);
+    this._defSpeed = 1;
     this.sprite = null;
     this.isFree = false;
-    this._health = 1;
-
+    this._health = 1;   
+    this.isDead = false;
 
     this.universe = universe;
-    this.isDead = false;
   }
-
-  addDamage(damage) {
-
-  }
-
-  createCircle() {
-    const graphics = new PIXI.Graphics();
-    graphics.beginFill(0xFFCC00);
-    graphics.drawCircle(-2.5, -2.5, 5, 5);
-    graphics.endFill();
-
-    return graphics;
-}
 
   setNextTarget() {
 			if (this._wayIndex == this._way.length) {
@@ -74,15 +60,13 @@ export class EnemyBase extends PIXI.Container {
   }
 
   init(posX, posY, targetX, targetY) {
-    this.isDead = false;
-    if (this.sprite != null) {
-      this.addChild(this.sprite);
-    }  
-    this.universe.addEnemy(this)
+    this.isDead = false;  
+    this.universe.addEnemy(this);
+
     this._position = new PIXI.Point(posX, posY);
     this._target = new PIXI.Point(targetX, targetY);
     
-    const pathFinder = new PathFinder(this.universe.mapMask);
+    const pathFinder = new PathFinder(this.universe.map.mapMask);
     this._way = pathFinder.findWay(this._position, this._target);
 
     if (this._way.length == 0) {	
@@ -95,10 +79,32 @@ export class EnemyBase extends PIXI.Container {
   }
 
   update(delta) {
+    // you code
+  }
 
+  addDamage(damage) {
+    // you code
   }
 
   kind() {
 		return this.kind;
-	}
+  }
+  
+  createRectangle() {
+    const graphics = new PIXI.Graphics();
+    graphics.beginFill(0xFFFFFF);
+    graphics.drawCircle(0, 0, 15, 15);
+    graphics.endFill();
+
+    return graphics;
+  }
+
+  createCircle() {
+    const graphics = new PIXI.Graphics();
+    graphics.beginFill(0xFFCC00);
+    graphics.drawCircle(-2.5, -2.5, 5, 5);
+    graphics.endFill();
+
+    return graphics;
+  }
 }  

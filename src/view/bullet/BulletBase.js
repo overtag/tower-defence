@@ -3,11 +3,11 @@ import { Avector } from "../../utils/Avector";
 import { Amath } from "../../utils/Amath";
 
 export class BulletBase extends PIXI.Container {
-    constructor(universe) {
+    constructor(universe, damage) {
         super();
     
         this.universe = universe;
-        this.damage = 0.1;
+        this.damage = damage;
         this._sprite = null;
         this._speed = new Avector(0, 0);
     }
@@ -27,15 +27,12 @@ export class BulletBase extends PIXI.Container {
         if (this._sprite) {
             this.addChild(this._sprite);
             this._sprite.rotation = angle;
-
         }
-
+        
         this.x = ax;
         this.y = ay;
-
-        this._speed.asSpeed(speed, (angle));
-
-        (this.universe.getBullets()).push(this);
+        this._speed.asSpeed(speed, angle);
+        this.universe.getBullets().push(this);
         this.universe.addChild(this);
     }
 
@@ -46,9 +43,10 @@ export class BulletBase extends PIXI.Container {
         const enemies = this.universe.getEnemies();
         enemies.forEach((enemy) => {
             const dist = Amath.distance(this.x, this.y, enemy.x, enemy.y);
-            if (dist < this.width / 2 + this.height / 2) {
+            console.log("DISTANCE", dist, this.width / 2 +  enemy.width / 2)
+            const damageDist = this.width / 2 +  enemy.width / 2
+            if (dist < damageDist) {
                 enemy.addDamage(this.damage);
-                console.log(enemy._health)
                 this.free();
             }
         })
