@@ -1,9 +1,11 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../../config';
-import {PathFinder} from '../../utils/PathFinder'
+import {PathFinder} from '../../utils/PathFinder2'
 import {Avector} from '../../utils/Avector'
 import {Amath} from '../../utils/Amath'
 import {Game} from '../Game'
+
+
 
 
 export class EnemyBase extends PIXI.Container {
@@ -16,6 +18,7 @@ export class EnemyBase extends PIXI.Container {
     super();
 
     this.kind = EnemyBase.KIND_NONE;
+    this.pathFinder = new PathFinder();
     this._speed = new Avector(1, 1);
     this._targetPos = new Avector(1, 1);
     this._defSpeed = 1;
@@ -23,16 +26,30 @@ export class EnemyBase extends PIXI.Container {
     this.isFree = false;
     this._health = 1;   
     this.isDead = false;
-
+    this._wayIndex = 1;
+    this._wayTarget = null;
     this.universe = universe;
+  }
+
+  init(way) {
+    this.isDead = false;  
+    this.universe.addEnemy(this);
+
+    this._way = way;
+    this._position = way[0];
+    this._wayIndex = 1;
+    this._isWay = true;
+    this.setNextTarget();
   }
 
   setNextTarget() {
 			if (this._wayIndex == this._way.length) {
 				this._isWay = false;
 			} else {
-				// Новая цель
+        // Новая цель
+      
         this._wayTarget = this._way[this._wayIndex];
+        console.log("123",this._way, this._wayIndex)
 				this._targetPos.set(Game.toPix(this._wayTarget.x), Game.toPix(this._wayTarget.y));
 				this._targetPos.x += Amath.random(-10, 10);
 				this._targetPos.y += Amath.random(-10, 10);
@@ -56,26 +73,9 @@ export class EnemyBase extends PIXI.Container {
         }
       })
       this.universe.removeChild(this);
+      console.log(enemies)
     }
-  }
-
-  init(posX, posY, targetX, targetY) {
-    this.isDead = false;  
-    this.universe.addEnemy(this);
-
-    this._position = new PIXI.Point(posX, posY);
-    this._target = new PIXI.Point(targetX, targetY);
     
-    const pathFinder = new PathFinder(this.universe.map.mapMask);
-    this._way = pathFinder.findWay(this._position, this._target);
-
-    if (this._way.length == 0) {	
-      console.log("EnemyBase::init() - Путь не найден!");
-    } else	{
-				this._isWay = true;
-				this._wayIndex = 0; // Текущий шаг
-        this.setNextTarget();
-			}
   }
 
   update(delta) {

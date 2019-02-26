@@ -43,6 +43,7 @@ export class EnemySolder extends EnemyBase {
     }
 
     update(delta) {
+       
         if  (this._isWay) {
             
             _calcDelay++;  

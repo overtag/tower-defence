@@ -18,8 +18,6 @@ export class App {
 
     PIXI.Graphics.CURVES.adaptive = true;
     config.isMobile = !!window.navigator.userAgent.match(/iPhone|Android|BlackBerry/i);
-		config.defaultWidth = config.isMobile ? 640: 640;
-    config.defaultHeight = config.isMobile ? 480: 480;
 		this.defaultWidth = config.defaultWidth;
 		this.defaultHeight = config.defaultHeight;
     this.canvas = canvas;
@@ -59,8 +57,8 @@ export class App {
     this.core.visible = true;
     this.app.stage.addChild(this.core);
 
-		/*this.resize();
-    window.addEventListener('resize', this.resize.bind(this));
+		this.resize();
+    /*window.addEventListener('resize', this.resize.bind(this));
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', this.resize.bind(this));
     };*/
@@ -75,16 +73,6 @@ export class App {
   onResize() {
     let width = window.innerWidth; // document.getElementById('visualization').clientWidth;
     let height = window.innerHeight;
-
-    if (window.innerWidth > window.innerHeight) {
-      this.canvas.style.transform = "rotate(90deg)";
-      width = window.innerWidth; // document.getElementById('visualization').clientWidth;
-      height = window.innerHeight;
-    } else {
-      this.canvas.style.transform = "rotate(0deg)";
-      width = window.innerWidth; // document.getElementById('visualization').clientWidth;
-      height = window.innerHeight;
-    }
 
     const canvas = this.app.view;
     canvas.style.width = `${width}px`;

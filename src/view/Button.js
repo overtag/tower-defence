@@ -3,10 +3,16 @@ import *as PIXI from 'pixi.js';
 export class Button extends PIXI.Container {
   constructor(normal, over, down) {
     super();
-    this.textures = {
+    /*this.textures = {
       normal : PIXI.Texture.fromImage(normal),
       over : PIXI.Texture.fromImage(over),
       down : PIXI.Texture.fromImage(down),
+    };*/
+
+    this.textures = {
+      normal : normal,
+      over : over,
+      down : down
     };
 
     this.sprite = new PIXI.Sprite(this.textures.normal);
@@ -24,7 +30,7 @@ export class Button extends PIXI.Container {
   }
  
   onclick() {
-
+    console.log("KLICK");
   }
 
   defaultClick() {

@@ -1,20 +1,28 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../config.js';
 import {Game} from './Game.js';
+import { Menu } from './Menu.js';
 
 export class Core extends PIXI.Container {
 	constructor() {
 		super();
 
-		const game = new Game();
-		this.addChild(game);
+		this.game = new Game();
+		this.addChild(this.game);
 
 		this.interactive = true;
-		onclick = () => {
-			game.newEnemy();
-		};
-
+	
+		const menu = new Menu();
+		this.addChild(menu);
 		//this.addChild(this.createRectangle())
+		this.onclick = this.addEnemy.bind(this);
+		this.touchend = this.addEnemy.bind(this);
+	}
+
+	addEnemy() {
+		console.log("addEnemy")
+		if(!this.game.isStartGame) return;
+		this.game.newEnemy();
 	}
 
 	createRectangle() {

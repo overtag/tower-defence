@@ -1,21 +1,23 @@
 import *as PIXI from 'pixi.js';
 import {config} from '../config';
+import {eventEmitter, EVENTS} from '../events/EventEmitter';
 import {EnemySolder} from './enemies/EnemySolder';
 import { GunTower } from './towers/GunTower';
 import Map from './map/Map';
-
+import {PathFinder} from '../utils/PathFinder2';
 
 const listOfEnemies = [];
 const listOfTowers = [];
 const listOfBullets = [];
-
-let tick = 0;
 const speed = 1;
 
 export class Game extends PIXI.Container {
   constructor() {
     super();
-    
+
+    this.isStartGame = false;
+    this.visible = false;
+
     this.map = new Map()
     this.addChild(this.map.makeDebugGrid());
 
@@ -26,6 +28,17 @@ export class Game extends PIXI.Container {
     this.tiker.add(this.enterFrame.bind(this));
     PIXI.ticker.Ticker.FPS = 60;
     this.tiker.start();
+
+    eventEmitter.on(EVENTS.START_GAME, this.startGame, this); 
+
+    this.pf = new PathFinder();
+    this.way = this.pf.getWay(this.map.mapMask)
+    
+  }
+
+  startGame() {
+    this.isStartGame = true;
+    this.visible = true;
 
     const tower = new GunTower(this);
     tower.init(3, 1);
@@ -44,11 +57,12 @@ export class Game extends PIXI.Container {
 
   newEnemy() {
     const solder = new EnemySolder(this);
-    solder.init(0, 0, this.map.mapMask[0].length - 1, this.map.mapMask.length - 1);
+    solder.init(this.way);
   }
 
   enterFrame(time) {  
-    tick++
+    if (!this.isStartGame) return;
+    console.log("EF")
     listOfEnemies.forEach((_enemy, index) => {
         _enemy.update(speed);
     });  
@@ -90,14 +104,6 @@ export class Game extends PIXI.Container {
         return;
       }
     });
-  }
-
-  getCellState(ax, ay) {
-    return this.mapMask[ay][ax];
-  }
-
-  setCellState(ax, ay, state) {
-    this.mapMask[ay][ax] = state;
   }
 
   /**
