@@ -15,8 +15,8 @@ export class Core extends PIXI.Container {
 		const menu = new Menu();
 		this.addChild(menu);
 		//this.addChild(this.createRectangle())
-		this.onclick = this.addEnemy.bind(this);
-		this.touchend = this.addEnemy.bind(this);
+		//this.onclick = this.addEnemy.bind(this);
+		//this.touchend = this.addEnemy.bind(this);
 	}
 
 	addEnemy() {

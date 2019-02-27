@@ -5,6 +5,8 @@ import {EnemySolder} from './enemies/EnemySolder';
 import { GunTower } from './towers/GunTower';
 import Map from './map/Map';
 import {PathFinder} from '../utils/PathFinder2';
+import { WaveCreator } from './levels/WaveCreator';
+import {map, waves} from './levels/Level';
 
 const listOfEnemies = [];
 const listOfTowers = [];
@@ -19,6 +21,7 @@ export class Game extends PIXI.Container {
     this.visible = false;
 
     this.map = new Map()
+    this.map.init(map);
     this.addChild(this.map.makeDebugGrid());
 
     this.delataTime = 0;
@@ -32,19 +35,30 @@ export class Game extends PIXI.Container {
     eventEmitter.on(EVENTS.START_GAME, this.startGame, this); 
 
     this.pf = new PathFinder();
-    this.way = this.pf.getWay(this.map.mapMask)
+    this.way = this.pf.getWay(this.map.mapMask);
+
+    this.waveCreator = new WaveCreator(this);
     
   }
 
-  startGame() {
-    this.isStartGame = true;
-    this.visible = true;
+  newEnemy() {
+    const solder = new EnemySolder(this);
+    solder.init(this.way);
+  }
 
+  startGame() {
     const tower = new GunTower(this);
     tower.init(3, 1);
 
     const tower1 = new GunTower(this);
     tower1.init(11, 6);
+
+    this.waveCreator.init(waves, map);
+
+
+    //---- START ----
+    this.isStartGame = true;
+    this.visible = true;
   }
 
   getEnemies() {
@@ -55,14 +69,13 @@ export class Game extends PIXI.Container {
     return listOfBullets;
   }
 
-  newEnemy() {
-    const solder = new EnemySolder(this);
-    solder.init(this.way);
-  }
+
 
   enterFrame(time) {  
     if (!this.isStartGame) return;
-    console.log("EF")
+
+    this.waveCreator.update();
+
     listOfEnemies.forEach((_enemy, index) => {
         _enemy.update(speed);
     });  
