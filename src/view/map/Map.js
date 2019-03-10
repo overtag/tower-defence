@@ -1,45 +1,72 @@
 import {config} from '../../config';
 import *as PIXI from 'pixi.js';
+import {eventEmitter, EVENTS} from '../../events/EventEmitter';
 
 export default class Map {
-    constructor() {
+    constructor(universe) {
         this.mapCell = [];
+        this.universe = universe;
+
+        eventEmitter.on(EVENTS.SHOW_BUILD_GRID, this.showBuildGrid, this); 
+        eventEmitter.on(EVENTS.HIDE_BUILD_GRID, this.hideBuildGrid, this);  
+        this.graphics = new PIXI.Graphics();
+        
+    }
+
+    showBuildGrid() {
+        this.graphics.visible = true;
+        this.universe.addChild(this.graphics);
+        this.makeBuildGrid();
+    }
+
+    hideBuildGrid() {
+        this.graphics.visible = false;
     }
 
     init(mapMask) {
         this.mapMask = mapMask;
     }
 
-    makeDebugGrid() {
+    makeBuildGrid() {
         let posX = 0;
         let posY = 0;
-        const container = new PIXI.Container();
+        const color = ['0xffcc00', '0x000000'];
+        this.graphics.clear();
+        const graphics = this.graphics;
+
         for (var ay = 0; ay < this.mapMask.length; ay++) {
-          this.mapCell.push([]);
             for (var ax = 0; ax < this.mapMask[ay].length; ax++) {
-                const sprite = new this.createRectangle(this.mapMask[ay][ax]);
-                sprite.x = posX;
-                sprite.y = posY;
-                container.addChild(sprite);
+                graphics.lineStyle(1, color[this.mapMask[ay][ax]]);
+                graphics.drawRect(posX, posY, config.MAP_CELL_SIZE, config.MAP_CELL_SIZE);
+              
                 posX += config.MAP_CELL_SIZE;
-                this.mapCell[ay].push(sprite);
             }
             posY += config.MAP_CELL_SIZE;
             posX = 0;
         }
-
-        return container;
+        graphics.endFill();
+ 
     }
-    
-    createRectangle(type) {
+
+    makeDebugGrid() {
+        let posX = 0;
+        let posY = 0;
         const color = ['0x808080', '0x554646'];
         const graphics = new PIXI.Graphics();
-        graphics.beginFill(color[type]);
-        graphics.drawRect(0,0, config.MAP_CELL_SIZE, config.MAP_CELL_SIZE);
+        for (var ay = 0; ay < this.mapMask.length; ay++) {
+          this.mapCell.push([]);
+            for (var ax = 0; ax < this.mapMask[ay].length; ax++) {
+                graphics.beginFill(color[this.mapMask[ay][ax]]);
+                graphics.drawRect(posX, posY, config.MAP_CELL_SIZE, config.MAP_CELL_SIZE);
+                posX += config.MAP_CELL_SIZE;
+            }
+            posY += config.MAP_CELL_SIZE;
+            posX = 0;
+        }
         graphics.endFill();
-
         return graphics;
     }
+
 
     clearMapMask() {
         this.mapMask = [];

@@ -7,6 +7,7 @@ import Map from './map/Map';
 import {PathFinder} from '../utils/PathFinder2';
 import { WaveCreator } from './levels/WaveCreator';
 import {map, waves} from './levels/Level';
+import {TowerPanel} from './TowerPanel';
 
 const listOfEnemies = [];
 const listOfTowers = [];
@@ -20,9 +21,14 @@ export class Game extends PIXI.Container {
     this.isStartGame = false;
     this.visible = false;
 
-    this.map = new Map()
+    this.map = new Map(this)
     this.map.init(map);
     this.addChild(this.map.makeDebugGrid());
+
+    this.towerPanel = new TowerPanel(this);
+    this.towerPanel.position.set(1000, 100);
+    this.addChild(this.towerPanel);
+    
 
     this.delataTime = 0;
     this.lastTick = 0;
@@ -36,7 +42,6 @@ export class Game extends PIXI.Container {
 
     this.pf = new PathFinder();
     this.way = this.pf.getWay(this.map.mapMask);
-
     this.waveCreator = new WaveCreator(this);
     
   }

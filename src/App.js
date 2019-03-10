@@ -25,6 +25,7 @@ export class App {
     this.canvas.height =  this.defaultHeight;
     window.canvas = this.canvas;
     PIXI.loader 
+      .add("../resources/spritesheet.json")
       .load(this.pixiInit.bind(this));
   }
 

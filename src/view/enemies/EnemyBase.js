@@ -4,7 +4,7 @@ import {PathFinder} from '../../utils/PathFinder2'
 import {Avector} from '../../utils/Avector'
 import {Amath} from '../../utils/Amath'
 import {Game} from '../Game'
-
+import {TweenLite, Linear} from "gsap/TweenMax";
 
 
 
@@ -59,8 +59,9 @@ export class EnemyBase extends PIXI.Container {
 				
 				// Установка новой скорости
 				this._speed.asSpeed(this._defSpeed, angle);
-				// Разворот спрайта
-				this.sprite.rotation = Amath.toDegrees(angle);
+        // Разворот спрайта
+        TweenLite.to(this.sprite, 1, {rotation: angle})
+				//this.sprite.rotation = Amath.toDegrees(angle);
 			}
 		}
 

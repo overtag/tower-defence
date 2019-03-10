@@ -14,7 +14,8 @@ export class EnemySolder extends EnemyBase {
 
         this.isAttaked = false;
         this.calcDelay = 0;
-        this.sprite = this.createRectangle();
+        this.sprite = new PIXI.Sprite(PIXI.Texture.fromImage("enemy"));
+        this.sprite.anchor.set(0.5, 0.5);
         this.addChild(this.sprite);
 
         this.hpBar = new HealthPoint();
