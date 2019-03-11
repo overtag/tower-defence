@@ -52,11 +52,11 @@ export class Game extends PIXI.Container {
   }
 
   startGame() {
-    const tower = new GunTower(this);
+    /*const tower = new GunTower(this);
     tower.init(3, 1);
 
     const tower1 = new GunTower(this);
-    tower1.init(11, 6);
+    tower1.init(11, 6);*/
 
     this.waveCreator.init(waves, map);
 

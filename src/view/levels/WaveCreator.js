@@ -34,7 +34,7 @@ export class WaveCreator {
             this.currentWave++;
             this.currInterval = 0;
         } else if (this.currentWay === this.way.length) { // LEVEL COMPLETE
-            console.log("LEVEL COMPLETE");
+            //console.log("LEVEL COMPLETE");
             this.isStart = false;
         } else {
             this.currInterval++

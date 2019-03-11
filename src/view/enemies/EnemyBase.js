@@ -49,7 +49,7 @@ export class EnemyBase extends PIXI.Container {
         // Новая цель
       
         this._wayTarget = this._way[this._wayIndex];
-        console.log("123",this._way, this._wayIndex)
+       // console.log("123",this._way, this._wayIndex)
 				this._targetPos.set(Game.toPix(this._wayTarget.x), Game.toPix(this._wayTarget.y));
 				this._targetPos.x += Amath.random(-10, 10);
 				this._targetPos.y += Amath.random(-10, 10);
@@ -60,6 +60,8 @@ export class EnemyBase extends PIXI.Container {
 				// Установка новой скорости
 				this._speed.asSpeed(this._defSpeed, angle);
         // Разворот спрайта
+        console.log(this.sprite.rotation,)
+  
         TweenLite.to(this.sprite, 1, {rotation: angle})
 				//this.sprite.rotation = Amath.toDegrees(angle);
 			}
@@ -74,7 +76,7 @@ export class EnemyBase extends PIXI.Container {
         }
       })
       this.universe.removeChild(this);
-      console.log(enemies)
+      //console.log(enemies)
     }
     
   }

@@ -28,10 +28,10 @@ export const waves = [
         delay: 90,
         interval: 90, 
         type: EnemySolder,
-        count: 10
+        count: 1
     },
 
-    {
+   /* {
         delay: 180,
         interval: 90, 
         type: EnemySolder,
@@ -43,5 +43,5 @@ export const waves = [
         interval: 90, 
         type: EnemySolder,
         count: 10
-    }
+    }*/
 ];

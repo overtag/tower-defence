@@ -43,7 +43,7 @@ export class BulletBase extends PIXI.Container {
         const enemies = this.universe.getEnemies();
         enemies.forEach((enemy) => {
             const dist = Amath.distance(this.x, this.y, enemy.x, enemy.y);
-            console.log("DISTANCE", dist, this.width / 2 +  enemy.width / 2)
+            //console.log("DISTANCE", dist, this.width / 2 +  enemy.width / 2)
             const damageDist = this.width / 2 +  enemy.width / 2
             if (dist < damageDist) {
                 enemy.addDamage(this.damage);

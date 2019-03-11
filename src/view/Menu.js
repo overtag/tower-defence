@@ -17,7 +17,7 @@ export class Menu extends PIXI.Container {
         this.gameBtn = new Button(normal, over, down);
         this.gameBtn.position.set(1000, 50);
         this.gameBtn.onclick = () => {
-            console.log("On CLICK")
+            //console.log("On CLICK")
             this.visible = false;
             eventEmitter.emit(EVENTS.START_GAME, {});
         };

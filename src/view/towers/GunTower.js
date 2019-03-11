@@ -13,7 +13,8 @@ export class GunTower extends TowerBase {
         this._attackDamage = 2;
         this._bulletSpeed = 3;
 
-        this._body = this.createCircle();
+        this._body = new PIXI.Sprite(PIXI.Texture.fromImage("tower"));
+        this._body.anchor.set(0.5, 0.5);
         this._head = this.createRect();
 
         super.init(tileX, tileY);

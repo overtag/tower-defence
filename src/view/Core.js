@@ -20,7 +20,7 @@ export class Core extends PIXI.Container {
 	}
 
 	addEnemy() {
-		console.log("addEnemy")
+		//console.log("addEnemy")
 		if(!this.game.isStartGame) return;
 		this.game.newEnemy();
 	}

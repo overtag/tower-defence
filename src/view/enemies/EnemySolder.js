@@ -25,7 +25,7 @@ export class EnemySolder extends EnemyBase {
     }
 
     addDamage(damage) {
-        console.log("addDamage", this._health, damage)
+        //console.log("addDamage", this._health, damage)
         this._health -= damage;
         this.hpBar.update(MAX_HEALTH, this._health)
         if (this._health <= 0) {

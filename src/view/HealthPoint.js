@@ -24,7 +24,7 @@ export default class HealthPoint extends PIXI.Container{
     update(maxHp, currentHp) {
         const newWidth = Math.floor(width * (currentHp /maxHp));
         this.hp.width = newWidth < 0 ? 0 : newWidth;
-        console.log("newWidth",maxHp, currentHp, newWidth)
+       // console.log("newWidth",maxHp, currentHp, newWidth)
     }
 
     createRectangle(color) {

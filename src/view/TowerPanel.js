@@ -2,12 +2,14 @@ import *as PIXI from 'pixi.js';
 import {config} from '../config.js';
 import {eventEmitter, EVENTS} from '../events/EventEmitter';
 import {Button} from './Button.js';
+import {Game} from './Game';
+import { GunTower } from './towers/GunTower.js';
 
 export class TowerPanel extends PIXI.Container {
-	constructor() {
+	constructor(universe) {
 		super();
 
-
+        this.universe = universe;
         const normal = this.createRectangle(100, 40, '0x789a4c').generateCanvasTexture();
         const over = this.createRectangle(100, 40, '0x8aaa61').generateCanvasTexture();
         const down = this.createRectangle(100, 40, '0x364424').generateCanvasTexture();
@@ -18,6 +20,7 @@ export class TowerPanel extends PIXI.Container {
            
            
             eventEmitter.emit(EVENTS.SHOW_BUILD_GRID, {});
+            this.startDrag()
         };
 
 
@@ -27,7 +30,8 @@ export class TowerPanel extends PIXI.Container {
   
   startDrag() {
     if ( this.isDrag ) return;
-    this.targetSprite = this.createRectangle(30, 30);
+    this.targetSprite = new PIXI.Sprite(PIXI.Texture.fromImage("tower"));
+    this.universe.addChild(this.targetSprite)
     this.targetSprite.click = this.endDrag.bind(this);
     this.targetSprite.mousemove = this.dragAndDrop.bind(this);
     this.targetSprite.mouseupoutside = this.endDrag.bind(this);
@@ -41,14 +45,19 @@ export class TowerPanel extends PIXI.Container {
 
   dragAndDrop(evt) {
     if (!this.isDrag) return;
-    const point = this.univese.toLocal( evt.data.global);
-    this.spriteTarget.x = point.x;
-    this.spriteTarget.y = point.y;
-
+    const point = this.universe.toLocal(evt.data.global);
+//--console.log("point", point);
+    this.targetSprite.x = point.x;
+    this.targetSprite.y = point.y;
   }
 
   endDrag() {
     this.isDrag = false;
+    this.targetSprite.visible = false;
+    eventEmitter.emit(EVENTS.SHOW_BUILD_GRID, {});
+
+    const tower1 = new GunTower(this.universe);;
+    tower1.init(Game.toTile(this.targetSprite.x), Game.toTile(this.targetSprite.y));
   }
 
 	createRectangle(w, h, color = 0xffffff) {
@@ -58,5 +67,5 @@ export class TowerPanel extends PIXI.Container {
 		graphics.endFill();
 	
 		return graphics;
-	  }
+	}
 }	
