@@ -1,4 +1,4 @@
-import *as PIXI from 'pixi.js';
+import * as PIXI from 'pixi.js';
 
 export class Button extends PIXI.Container {
   constructor(normal, over, down) {
@@ -10,9 +10,9 @@ export class Button extends PIXI.Container {
     };*/
 
     this.textures = {
-      normal : normal,
-      over : over,
-      down : down
+      normal: normal,
+      over: over,
+      down: down,
     };
 
     this.sprite = new PIXI.Sprite(this.textures.normal);
@@ -20,7 +20,7 @@ export class Button extends PIXI.Container {
     this.sprite.interactive = true;
     this.addChild(this.sprite);
 
-    this.click = this.defaultClick.bind(this);
+    this.pointerdown = this.defaultClick.bind(this);
     this.mousedown = this.mousedown.bind(this);
     this.mouseover = this.mouseover.bind(this);
     this.mouseup = this.mouseup.bind(this);
@@ -28,9 +28,9 @@ export class Button extends PIXI.Container {
     this.mouseout = this.mouseout.bind(this);
     this.touchend = this.defaultClick.bind(this);
   }
- 
+
   onclick() {
-    console.log("KLICK");
+    console.log('KLICK');
   }
 
   defaultClick() {
@@ -56,4 +56,4 @@ export class Button extends PIXI.Container {
   mouseout() {
     this.sprite.texture = this.textures.normal;
   }
-};
+}

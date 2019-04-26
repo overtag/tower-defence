@@ -1,36 +1,32 @@
-import *as PIXI from 'pixi.js';
-import {config} from '../config.js';
-import {Game} from './Game.js';
-import { Menu } from './Menu.js';
+import * as PIXI from 'pixi.js';
+import { config } from '../config.js';
+import { Game } from './Game.js';
+import { BotPanel } from './BotPanel.js';
 
 export class Core extends PIXI.Container {
-	constructor() {
-		super();
+  constructor() {
+    super();
 
-		this.game = new Game();
-		this.addChild(this.game);
+    const bg = new PIXI.Graphics();
+    bg.beginFill(0x235a3b);
+    bg.drawRect(0, 0, config.defaultWidth, config.defaultHeight);
+    bg.endFill();
+    this.addChild(bg);
 
-		this.interactive = true;
-	
-		const menu = new Menu();
-		this.addChild(menu);
-		//this.addChild(this.createRectangle())
-		//this.onclick = this.addEnemy.bind(this);
-		//this.touchend = this.addEnemy.bind(this);
-	}
+    const game = new Game();
+    this.addChild(game);
 
-	addEnemy() {
-		//console.log("addEnemy")
-		if(!this.game.isStartGame) return;
-		this.game.newEnemy();
-	}
+    const botPanel = new BotPanel(game);
+    botPanel.position.set(0, config.defaultHeight - botPanel.height);
+    this.addChild(botPanel);
+  }
 
-	createRectangle() {
-		const graphics = new PIXI.Graphics();
-		graphics.beginFill(0xFFFFFF);
-		graphics.drawRect(0, 0, 32, 32);
-		graphics.endFill();
-	
-		return graphics;
-	  }
-}	
+  createRectangle() {
+    const graphics = new PIXI.Graphics();
+    graphics.beginFill(0xffffff);
+    graphics.drawRect(0, 0, 32, 32);
+    graphics.endFill();
+
+    return graphics;
+  }
+}
