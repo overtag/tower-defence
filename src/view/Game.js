@@ -22,7 +22,7 @@ export class Game extends PIXI.Container {
       const enemy = new EnemyBase();
       enemy.x = Math.random() * (config.defaultWidth - enemy.width);
       enemies.push(enemy);
-      this.addChild(enemy);
+      this.addChildAt(enemy, 0);
       tick = 0;
     }
 

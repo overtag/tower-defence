@@ -6,7 +6,9 @@ export class Trap extends PIXI.Container {
   constructor() {
     super();
 
-    this.sprite = this.createRectangle();
+    this.sprite = new PIXI.Sprite(PIXI.Texture.fromImage('Rake_mc0000'));
+    this.sprite.anchor.set(0.5, 0.5);
+    //tthis.sprite.rotation = Math.PI / 2;
     this.addChild(this.sprite);
   }
 

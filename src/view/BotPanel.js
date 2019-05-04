@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js';
 import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 import { Button } from './Button';
+import { Trap } from '../traps/Trap';
 
 export class BotPanel extends PIXI.Container {
   constructor(universe) {
@@ -45,8 +46,9 @@ export class BotPanel extends PIXI.Container {
 
   startDrag() {
     if (this.isDrag) return;
-    console.log('startDrag');
-    this.targetSprite = new PIXI.Sprite(PIXI.Texture.fromImage('tower'));
+
+    this.targetSprite = new Trap(); // new PIXI.Sprite(PIXI.Texture.fromImage('Rake_mc0000'));
+    this.targetSprite.scale.set(2);
     this.universe.addChild(this.targetSprite);
     this.targetSprite.click = this.endDrag.bind(this);
     this.targetSprite.mousemove = this.dragAndDrop.bind(this);
