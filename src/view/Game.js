@@ -2,8 +2,11 @@ import * as PIXI from 'pixi.js';
 import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 import { EnemyBase } from '../enemies/EnemyBase';
+import { Trap } from '../traps/Trap';
 
 const enemies = [];
+const traps = [];
+
 let tick = 0;
 
 export class Game extends PIXI.Container {
@@ -16,6 +19,14 @@ export class Game extends PIXI.Container {
     this.tiker.start();
   }
 
+  createTrap() {
+    const trap = new Trap(enemies);
+    this.addChild(trap);
+    traps.push(trap);
+
+    return trap;
+  }
+
   enterFrame() {
     tick++;
     if (tick === 120) {
@@ -23,8 +34,13 @@ export class Game extends PIXI.Container {
       enemy.x = Math.random() * (config.defaultWidth - enemy.width);
       enemies.push(enemy);
       this.addChildAt(enemy, 0);
-      tick = 0;
+      console.log('enemy', enemy.x, enemy.y);
+      // tick = 0;
     }
+
+    traps.forEach(function(trap) {
+      trap.update(enemies);
+    });
 
     enemies.forEach(function(enemy) {
       enemy.update();

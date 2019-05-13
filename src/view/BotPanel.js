@@ -47,7 +47,7 @@ export class BotPanel extends PIXI.Container {
   startDrag() {
     if (this.isDrag) return;
 
-    this.targetSprite = new Trap(); // new PIXI.Sprite(PIXI.Texture.fromImage('Rake_mc0000'));
+    this.targetSprite = this.universe.createTrap(); // new PIXI.Sprite(PIXI.Texture.fromImage('Rake_mc0000'));
     this.targetSprite.scale.set(2);
     this.universe.addChild(this.targetSprite);
     this.targetSprite.click = this.endDrag.bind(this);
@@ -67,10 +67,12 @@ export class BotPanel extends PIXI.Container {
     //--console.log("point", point);
     this.targetSprite.x = point.x;
     this.targetSprite.y = point.y;
+    console.log('TRAP', this.targetSprite.x, this.targetSprite.y);
   }
 
   endDrag() {
     this.isDrag = false;
+
     //this.targetSprite.visible = false;
     eventEmitter.emit(EVENTS.SHOW_BUILD_GRID, {});
   }

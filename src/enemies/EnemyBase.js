@@ -40,22 +40,25 @@ export class EnemyBase extends PIXI.Container {
     this.sprite.anchor.set(0.5, 0.5);
     this.addChild(this.sprite);
 
-    this.sprite.position.set(100, 100);
+    this.sprite.position.set(0, 0);
     this.sprite.scale.set(2);
     this.sprite.gotoAndPlay(4);
     this.sprite.animationSpeed = 0.5;
-  }
 
-  update() {
-    this.y += 0.2;
+    console.log(this.width, this.height);
+    this.addChild(this.createRectangle());
   }
 
   createRectangle() {
     const graphics = new PIXI.Graphics();
-    graphics.beginFill(0xffffff);
-    graphics.drawRect(0, 0, 32, 32);
+    graphics.beginFill(0xffcc00);
+    graphics.drawRect(0, 0, 5, 5);
     graphics.endFill();
 
     return graphics;
+  }
+
+  update() {
+    this.y += 0.2;
   }
 }
