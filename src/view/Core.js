@@ -1,7 +1,9 @@
 import * as PIXI from 'pixi.js';
 import { config } from '../config.js';
 import { Game } from './Game.js';
+import { Menu } from './Menu.js';
 import { BotPanel } from './BotPanel.js';
+import { eventEmitter, EVENTS } from '../events/EventEmitter';
 
 export class Core extends PIXI.Container {
   constructor() {
@@ -13,12 +15,26 @@ export class Core extends PIXI.Container {
     bg.endFill();
     this.addChild(bg);
 
-    const game = new Game();
-    this.addChild(game);
+    this.game = new Game();
+    this.game.visible = false;
+    this.addChild(this.game);
 
-    const botPanel = new BotPanel(game);
-    botPanel.position.set(0, config.defaultHeight - botPanel.height);
-    this.addChild(botPanel);
+    this.botPanel = new BotPanel(this.game);
+    this.botPanel.visible = false;
+    this.botPanel.position.set(0, config.defaultHeight - this.botPanel.height);
+    this.addChild(this.botPanel);
+
+    this.menu = new Menu();
+    this.addChild(this.menu);
+    eventEmitter.on(EVENTS.PLAY_GAME, this.playGame, this);
+  }
+
+  playGame() {
+    this.botPanel.visible = true;
+    this.game.visible = true;
+    this.game.play();
+
+    this.menu.visible = false;
   }
 
   createRectangle() {

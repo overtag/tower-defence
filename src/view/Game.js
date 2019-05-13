@@ -18,10 +18,14 @@ export class Game extends PIXI.Container {
     this.tiker = new PIXI.ticker.Ticker();
     this.tiker.add(this.enterFrame.bind(this));
     PIXI.ticker.Ticker.FPS = 60;
-    this.tiker.start();
+    this.tiker.stop();
 
     eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeEnemy, this);
     eventEmitter.on(EVENTS.DEAD_ENEMY, this.removeTrap, this);
+  }
+
+  play() {
+    this.tiker.start();
   }
 
   removeTrap(trap) {
