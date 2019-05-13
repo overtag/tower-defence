@@ -72,7 +72,7 @@ export class BotPanel extends PIXI.Container {
 
   endDrag() {
     this.isDrag = false;
-
+    this.targetSprite.enableTrap();
     //this.targetSprite.visible = false;
     eventEmitter.emit(EVENTS.SHOW_BUILD_GRID, {});
   }

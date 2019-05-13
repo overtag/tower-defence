@@ -3,8 +3,11 @@ import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 
 export class EnemyBase extends PIXI.Container {
-  constructor() {
+  constructor(universe) {
     super();
+
+    this.universe = universe;
+    this.health = 1;
 
     let alienImages = [
       'Patch_mc0000',
@@ -49,6 +52,11 @@ export class EnemyBase extends PIXI.Container {
     this.addChild(this.createRectangle());
   }
 
+  init(x, y) {
+    this.health = 1;
+    this.sprite.gotoAndPlay(Math.floor(Math.random() * 20));
+  }
+
   createRectangle() {
     const graphics = new PIXI.Graphics();
     graphics.beginFill(0xffcc00);
@@ -60,5 +68,17 @@ export class EnemyBase extends PIXI.Container {
 
   update() {
     this.y += 0.2;
+  }
+
+  damage(damage) {
+    this.health -= damage;
+    if (this.health <= 0) {
+      this.dead();
+    }
+  }
+
+  dead() {
+    this.sprite.gotoAndStop(0);
+    eventEmitter.emit(EVENTS.DEAD_ENEMY, this);
   }
 }

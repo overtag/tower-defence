@@ -4,8 +4,10 @@ import { eventEmitter, EVENTS } from '../events/EventEmitter';
 import { EnemyBase } from '../enemies/EnemyBase';
 import { Trap } from '../traps/Trap';
 
-const enemies = [];
 const traps = [];
+const enemies = [];
+const cacheEnemies = [];
+const cacheTraps = [];
 
 let tick = 0;
 
@@ -17,10 +19,26 @@ export class Game extends PIXI.Container {
     this.tiker.add(this.enterFrame.bind(this));
     PIXI.ticker.Ticker.FPS = 60;
     this.tiker.start();
+
+    eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeEnemy, this);
+    eventEmitter.on(EVENTS.DEAD_ENEMY, this.removeTrap, this);
+  }
+
+  removeTrap(trap) {
+    this.removeChild(trap);
+    traps.splice(traps.findIndex(_trap => _trap === trap), 1);
+    cacheTraps.push(trap);
+  }
+
+  removeEnemy(enemy) {
+    this.removeChild(enemy);
+    enemies.splice(enemies.findIndex(_enemy => _enemy === enemy), 1);
+    cacheEnemies.push(enemy);
   }
 
   createTrap() {
     const trap = new Trap(enemies);
+    trap.init();
     this.addChild(trap);
     traps.push(trap);
 
@@ -29,13 +47,14 @@ export class Game extends PIXI.Container {
 
   enterFrame() {
     tick++;
-    if (tick === 120) {
-      const enemy = new EnemyBase();
-      enemy.x = Math.random() * (config.defaultWidth - enemy.width);
+    if (tick === 240) {
+      const enemy = new EnemyBase(this);
+      enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);
+      enemy.init();
       enemies.push(enemy);
       this.addChildAt(enemy, 0);
-      console.log('enemy', enemy.x, enemy.y);
-      // tick = 0;
+
+      tick = 0;
     }
 
     traps.forEach(function(trap) {
