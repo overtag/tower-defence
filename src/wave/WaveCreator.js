@@ -10,24 +10,36 @@ const level = [
 
 export class WaveCreator {
   constructor(universe) {
-    super();
     this.universe = universe;
-    this.curr = null;
+    this.wave = null;
 
+    this.isPlay = false;
     this.ticks = 0;
   }
 
+  play() {
+    this.isPlay = true;
+    this.newWave(level);
+  }
+
+  stop() {
+    this.isPlay = false;
+  }
+
   newWave(currLevel) {
+    console.log(currLevel.length);
     if (currLevel.length >= 0) {
-      this.wave = currLevel.unshift();
+      this.wave = currLevel.shift();
     } else {
       // end level
     }
+    console.log('WAVE', this.wave);
   }
 
   update() {
+    if (!this.isPlay || !this.wave) return;
     this.ticks++;
-
+    console.log(this.ticks, this.wave.interval);
     if (this.ticks >= this.wave.interval) {
       this.universe.createEnemy(this.wave.types);
       this.ticks = 0;

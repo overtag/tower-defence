@@ -3,6 +3,7 @@ import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 import { EnemyBase } from '../enemies/EnemyBase';
 import { Trap } from '../traps/Trap';
+import { WaveCreator } from '../wave/WaveCreator';
 
 const traps = [];
 const enemies = [];
@@ -20,12 +21,23 @@ export class Game extends PIXI.Container {
     PIXI.ticker.Ticker.FPS = 60;
     this.tiker.stop();
 
+    this.waveCreator = new WaveCreator(this);
+
     eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeEnemy, this);
     eventEmitter.on(EVENTS.DEAD_ENEMY, this.removeTrap, this);
   }
 
+  createEnemy() {
+    const enemy = new EnemyBase(this);
+    enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);
+    enemy.init();
+    enemies.push(enemy);
+    this.addChildAt(enemy, 0);
+  }
+
   play() {
     this.tiker.start();
+    this.waveCreator.play();
   }
 
   removeTrap(trap) {
@@ -50,16 +62,7 @@ export class Game extends PIXI.Container {
   }
 
   enterFrame() {
-    tick++;
-    if (tick === 240) {
-      const enemy = new EnemyBase(this);
-      enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);
-      enemy.init();
-      enemies.push(enemy);
-      this.addChildAt(enemy, 0);
-
-      tick = 0;
-    }
+    this.waveCreator.update();
 
     traps.forEach(function(trap) {
       trap.update(enemies);
