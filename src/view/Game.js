@@ -23,8 +23,8 @@ export class Game extends PIXI.Container {
 
     this.waveCreator = new WaveCreator(this);
 
-    eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeEnemy, this);
-    eventEmitter.on(EVENTS.DEAD_ENEMY, this.removeTrap, this);
+    eventEmitter.on(EVENTS.DEAD_ENEMY, this.removeEnemy, this);
+    eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeTrap, this);
   }
 
   createEnemy() {
