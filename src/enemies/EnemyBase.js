@@ -48,7 +48,6 @@ export class EnemyBase extends PIXI.Container {
     this.sprite.gotoAndPlay(4);
     this.sprite.animationSpeed = 0.5;
 
-    console.log(this.width, this.height);
     this.addChild(this.createRectangle());
   }
 
@@ -68,12 +67,17 @@ export class EnemyBase extends PIXI.Container {
 
   update() {
     this.y += 0.2;
+    if (this.y > 50) {
+      this.dead();
+      eventEmitter.emit(EVENTS.COME_ENEMY, this);
+    }
   }
 
   damage(damage) {
     this.health -= damage;
     if (this.health <= 0) {
       this.dead();
+      eventEmitter.emit(EVENTS.DEAD_ENEMY, this);
     }
   }
 

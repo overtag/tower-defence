@@ -11,4 +11,13 @@ export const config = {
   STATE_ATTACK: 2,
   STATE_CELL_FREE: 0,
   STATE_CELL_BUSY: 1,
+  panel_text: {
+    fontFamily: 'Helvetica',
+    fontSize: 25,
+    fontWeight: 'bold',
+    fill: 0x8159c1,
+    align: 'center',
+    wordWrap: true,
+    wordWrapWidth: 400,
+  },
 };

@@ -23,7 +23,7 @@ export class BotPanel extends PIXI.Container {
     this.addChild(this.trapBtnOne);
 
     this.trapBtnOne.onclick = () => {
-      this.startDrag();
+      this.startDrag(1);
     };
 
     this.trapBtnTwo = new Button(grT, grT, grT);
@@ -33,6 +33,28 @@ export class BotPanel extends PIXI.Container {
     this.trapBtnThree = new Button(grT, grT, grT);
     this.trapBtnThree.position.set(210, 10);
     this.addChild(this.trapBtnThree);
+
+    this.healtTf = new PIXI.Text('1', config.panel_text);
+    this.healtTf.position.set(500, 20);
+    this.addChild(this.healtTf);
+
+    this.coinsTf = new PIXI.Text('120', config.panel_text);
+    this.coinsTf.position.set(500, 60);
+    this.addChild(this.coinsTf);
+
+    eventEmitter.on(EVENTS.COME_ENEMY, this.updateHealth, this);
+  }
+
+  init() {
+    this.healtTf.text = 3;
+    this.coinsTf.text = 100;
+  }
+
+  updateHealth() {
+    this.healtTf.text = +this.healtTf.text - 1;
+    if (+this.healtTf.text <= 0) {
+      console.log('Game Over');
+    }
   }
 
   createRectangle() {
@@ -44,7 +66,11 @@ export class BotPanel extends PIXI.Container {
     return graphics;
   }
 
-  startDrag() {
+  startDrag(type) {
+    if (type === 1 && ++this.coinsTf.text - 3 >= 0) {
+      this.coinsTf.text = ++this.coinsTf.text - 3;
+    }
+
     if (this.isDrag) return;
 
     this.targetSprite = this.universe.createTrap(); // new PIXI.Sprite(PIXI.Texture.fromImage('Rake_mc0000'));
@@ -67,7 +93,6 @@ export class BotPanel extends PIXI.Container {
     //--console.log("point", point);
     this.targetSprite.x = point.x;
     this.targetSprite.y = point.y;
-    console.log('TRAP', this.targetSprite.x, this.targetSprite.y);
   }
 
   endDrag() {

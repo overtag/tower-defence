@@ -31,6 +31,7 @@ export class Core extends PIXI.Container {
 
   playGame() {
     this.botPanel.visible = true;
+    this.botPanel.init();
     this.game.visible = true;
     this.game.play();
 
