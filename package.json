@@ -27,6 +27,7 @@
     "animejs": "^2.2.0",
     "gsap": "^2.1.2",
     "howler": "^2.0.15",
+    "natives": "^1.1.6",
     "pixi-filters": "^2.6.1",
     "pixi-sound": "^2.0.2",
     "pixi.js": "^4.3.4",

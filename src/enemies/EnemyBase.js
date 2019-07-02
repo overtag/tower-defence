@@ -31,15 +31,25 @@ export class EnemyBase extends PIXI.Container {
       'Patch_mc0018',
       'Patch_mc0019',
     ];
+
+    const zJester = []
+    for (let i = 0; i < 80; i++) {
+      if (i< 10) {
+        zJester.push(`ZJester_mc000${i}`)
+      } else {
+        zJester.push(`ZJester_mc00${i}`)
+      }
+    }
+
     let textureArray = [];
 
-    for (let i = 0; i < 20; i++) {
-      let texture = PIXI.Texture.from(alienImages[i]);
+    for (let i = 0; i < zJester.length; i++) {
+      let texture = PIXI.Texture.from(zJester[i]);
       textureArray.push(texture);
     }
 
     this.sprite = new PIXI.extras.AnimatedSprite(textureArray);
-    this.sprite.rotation = Math.PI / 2;
+    
     this.sprite.anchor.set(0.5, 0.5);
     this.addChild(this.sprite);
 

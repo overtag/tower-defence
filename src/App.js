@@ -25,6 +25,7 @@ export class App {
       .add('../resources/rake.json')
       .add('../resources/rake_effect.json')
       .add('../resources/zombie.json')
+      .add('../resources/ZJester.json')
       .add('../resources/spritesheet.json')
       .load(this.pixiInit.bind(this));
   }
