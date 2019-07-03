@@ -1,8 +1,9 @@
 import * as PIXI from 'pixi.js';
 import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
+import { EnemyBase } from './EnemyBase';
 
-export class EnemyBase extends PIXI.Container {
+export class Jeste extends EnemyBase {
   constructor(universe) {
     super();
 
