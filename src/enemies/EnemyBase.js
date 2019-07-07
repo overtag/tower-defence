@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { config } from '../config';
+import { Names } from './Names'; 
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 
 export class EnemyBase extends PIXI.Container {
@@ -8,46 +9,25 @@ export class EnemyBase extends PIXI.Container {
 
     this.universe = universe;
     this.health = 1;
+    this.sprite = null;
+  }
 
-    let alienImages = [
-      'Patch_mc0000',
-      'Patch_mc0001',
-      'Patch_mc0002',
-      'Patch_mc0003',
-      'Patch_mc0004',
-      'Patch_mc0005',
-      'Patch_mc0006',
-      'Patch_mc0007',
-      'Patch_mc0008',
-      'Patch_mc0009',
-      'Patch_mc0010',
-      'Patch_mc0011',
-      'Patch_mc0012',
-      'Patch_mc0013',
-      'Patch_mc0014',
-      'Patch_mc0015',
-      'Patch_mc0016',
-      'Patch_mc0017',
-      'Patch_mc0018',
-      'Patch_mc0019',
-    ];
-
-    const zJester = []
-    for (let i = 0; i < 80; i++) {
-      if (i< 10) {
-        zJester.push(`ZJester_mc000${i}`)
-      } else {
-        zJester.push(`ZJester_mc00${i}`)
-      }
-    }
-
-    let textureArray = [];
-
-    for (let i = 0; i < zJester.length; i++) {
-      let texture = PIXI.Texture.from(zJester[i]);
+  initClip(TextureName) {
+    const listNames = []
+    const {length , name} = Names[TextureName];
+    const textureArray = [];
+    for (let i = 0; i < length; i++) {
+      listNames.push(`${name}${i< 10 ? '000' : '00'}${i}`)
+      let texture = PIXI.Texture.from(listNames[i]);
       textureArray.push(texture);
     }
 
+    return textureArray;
+  }
+
+  initSprite() {
+
+    const textureArray = this.initClip('Patch_mc');
     this.sprite = new PIXI.extras.AnimatedSprite(textureArray);
     
     this.sprite.anchor.set(0.5, 0.5);
@@ -60,8 +40,8 @@ export class EnemyBase extends PIXI.Container {
 
     this.addChild(this.createRectangle());
   }
-
   init(x, y) {
+
     this.health = 1;
     this.sprite.gotoAndPlay(Math.floor(Math.random() * 20));
   }

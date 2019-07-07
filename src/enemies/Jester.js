@@ -3,7 +3,7 @@ import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
 import { EnemyBase } from './EnemyBase';
 
-export class Jeste extends EnemyBase {
+export class zJester extends EnemyBase {
   constructor(universe) {
     super();
 
