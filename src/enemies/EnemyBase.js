@@ -10,7 +10,7 @@ export class EnemyBase extends PIXI.Container {
     this.universe = universe;
     this.health = 1;
     this.sprite = null;
-    this.type =  Names.Patch_mc;
+    this.type =  Names.Patch_mc.name;
   }
 
   initClip() {
