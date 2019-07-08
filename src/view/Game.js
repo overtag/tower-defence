@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js';
 import { config } from '../config';
 import { eventEmitter, EVENTS } from '../events/EventEmitter';
-import { EnemyBase } from '../enemies/EnemyBase';
+import { Jester } from '../enemies/Jester';
 import { Trap } from '../traps/Trap';
 import { WaveCreator } from '../wave/WaveCreator';
 
@@ -28,7 +28,7 @@ export class Game extends PIXI.Container {
   }
 
   createEnemy() {
-    const enemy = new EnemyBase(this);
+    const enemy = new Jester(this);
     enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);
     enemy.init();
     enemies.push(enemy);

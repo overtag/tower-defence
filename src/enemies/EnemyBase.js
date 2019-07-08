@@ -10,11 +10,13 @@ export class EnemyBase extends PIXI.Container {
     this.universe = universe;
     this.health = 1;
     this.sprite = null;
+    this.type =  Names.Patch_mc;
   }
 
-  initClip(TextureName) {
+  initClip() {
     const listNames = []
-    const {length , name} = Names[TextureName];
+    console.log(Names[this.type])
+    const {length , name} = Names[this.type];
     const textureArray = [];
     for (let i = 0; i < length; i++) {
       listNames.push(`${name}${i< 10 ? '000' : '00'}${i}`)
@@ -26,13 +28,12 @@ export class EnemyBase extends PIXI.Container {
   }
 
   initSprite() {
-
-    const textureArray = this.initClip('Patch_mc');
+    const textureArray = this.initClip();
     this.sprite = new PIXI.extras.AnimatedSprite(textureArray);
     
     this.sprite.anchor.set(0.5, 0.5);
     this.addChild(this.sprite);
-
+    this.sprite.rotation = Math.PI /2
     this.sprite.position.set(0, 0);
     this.sprite.scale.set(2);
     this.sprite.gotoAndPlay(4);
@@ -40,8 +41,10 @@ export class EnemyBase extends PIXI.Container {
 
     this.addChild(this.createRectangle());
   }
+
   init(x, y) {
 
+    this.initSprite();
     this.health = 1;
     this.sprite.gotoAndPlay(Math.floor(Math.random() * 20));
   }
