@@ -1,0 +1,2289 @@
+{
+    "ANIMATION": {
+        "name": "Invasion Game2",
+        "SYMBOL_name": "RakeEffect_mc",
+        "TIMELINE": {
+            "LAYERS": [
+                {
+                    "Layer_name": "Слой 1",
+                    "Frames": [
+                        {
+                            "index": 0,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0000",
+                                        "Position": {
+                                            "x": -16,
+                                            "y": -16
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 1,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0001",
+                                        "Position": {
+                                            "x": -16,
+                                            "y": -16
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 2,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0002",
+                                        "Position": {
+                                            "x": -16,
+                                            "y": -16
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 3,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0003",
+                                        "Position": {
+                                            "x": -17,
+                                            "y": -15
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 4,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0004",
+                                        "Position": {
+                                            "x": -17,
+                                            "y": -15
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 5,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0005",
+                                        "Position": {
+                                            "x": -5,
+                                            "y": -40
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0006",
+                                        "Position": {
+                                            "x": -5,
+                                            "y": -40
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 7,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0007",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -50
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0008",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -50
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 9,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0009",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -50
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 10,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0010",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -50
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0011",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -50
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 12,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0012",
+                                        "Position": {
+                                            "x": -146,
+                                            "y": -42
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Layer_name": "Слой 2",
+                    "Frames": [
+                        {
+                            "index": 0,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 1,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 2,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 3,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 4,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 5,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0013",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0014",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 7,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0015",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0016",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 9,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0017",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 10,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0018",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0019",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 12,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "ATLAS_SPRITE_instance": {
+                                        "name": "0020",
+                                        "Position": {
+                                            "x": -9,
+                                            "y": -60
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Layer_name": "Слой 3",
+                    "Frames": [
+                        {
+                            "index": 0,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 1,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 2,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 3,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 4,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 5,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 7,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 9,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 10,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 12,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Effects_bone",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.55,
+                                            "y": -11.35
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": 15.05,
+                                            "m31": -21.2,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 15.05,
+                                                "y": -21.2,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1,
+                                                "y": 1,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Layer_name": "Слой 4",
+                    "Frames": [
+                        {
+                            "index": 0,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 1,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 2,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 3,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 4,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 5,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 7,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 9,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 10,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 12,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "bounds_rect",
+                                        "Instance_Name": "e_bounds",
+                                        "bitmap": {
+                                            "name": "0021",
+                                            "Position": {
+                                                "x": -1,
+                                                "y": -1
+                                            }
+                                        },
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 16,
+                                            "y": 16
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 2.95215,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 3.76605,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -36.95,
+                                            "m31": -99.4,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -36.95,
+                                                "y": -99.4,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 2.95215,
+                                                "y": 3.76605,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "SYMBOL_DICTIONARY": {
+        "Symbols": [
+            {
+                "SYMBOL_name": "Effects_bone",
+                "TIMELINE": {
+                    "LAYERS": [
+                        {
+                            "Layer_name": "Волосы",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 1,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 2,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 3,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 4,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 5,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 6,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 7,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 8,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 10,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 11,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 12,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 13,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 14,
+                                    "duration": 1,
+                                    "elements": []
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Голова",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0022",
+                                                "Position": {
+                                                    "x": -14,
+                                                    "y": -34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 1,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0023",
+                                                "Position": {
+                                                    "x": -14,
+                                                    "y": -34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 2,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0024",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 3,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0025",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 4,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0026",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -34
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 5,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0027",
+                                                "Position": {
+                                                    "x": -20,
+                                                    "y": -41
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 6,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0028",
+                                                "Position": {
+                                                    "x": -20,
+                                                    "y": -41
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 7,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0029",
+                                                "Position": {
+                                                    "x": -20,
+                                                    "y": -41
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 8,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0030",
+                                                "Position": {
+                                                    "x": -28,
+                                                    "y": -48
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0031",
+                                                "Position": {
+                                                    "x": -28,
+                                                    "y": -48
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 10,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0032",
+                                                "Position": {
+                                                    "x": -28,
+                                                    "y": -48
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 11,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0033",
+                                                "Position": {
+                                                    "x": -34,
+                                                    "y": -59
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 12,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0034",
+                                                "Position": {
+                                                    "x": -34,
+                                                    "y": -59
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 13,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0035",
+                                                "Position": {
+                                                    "x": -34,
+                                                    "y": -59
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 14,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0036",
+                                                "Position": {
+                                                    "x": -38,
+                                                    "y": -64
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Тело",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0037",
+                                                "Position": {
+                                                    "x": -9,
+                                                    "y": -6
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 1,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0038",
+                                                "Position": {
+                                                    "x": -9,
+                                                    "y": -6
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 2,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0039",
+                                                "Position": {
+                                                    "x": -9,
+                                                    "y": -7
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 3,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0040",
+                                                "Position": {
+                                                    "x": -9,
+                                                    "y": -7
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 4,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0041",
+                                                "Position": {
+                                                    "x": -9,
+                                                    "y": -7
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 5,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0042",
+                                                "Position": {
+                                                    "x": -12,
+                                                    "y": -11
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 6,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0043",
+                                                "Position": {
+                                                    "x": -12,
+                                                    "y": -11
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 7,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0044",
+                                                "Position": {
+                                                    "x": -12,
+                                                    "y": -11
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 8,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0045",
+                                                "Position": {
+                                                    "x": -13,
+                                                    "y": -17
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0046",
+                                                "Position": {
+                                                    "x": -13,
+                                                    "y": -17
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 10,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0047",
+                                                "Position": {
+                                                    "x": -13,
+                                                    "y": -17
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 11,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0048",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -24
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 12,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0049",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -24
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 13,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0050",
+                                                "Position": {
+                                                    "x": -15,
+                                                    "y": -24
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 14,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0051",
+                                                "Position": {
+                                                    "x": -20,
+                                                    "y": -28
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Правая рука",
+                            "Frames": []
+                        },
+                        {
+                            "Layer_name": "Левая рука",
+                            "Frames": []
+                        },
+                        {
+                            "Layer_name": "Левая нога",
+                            "Frames": []
+                        },
+                        {
+                            "Layer_name": "Правая нога",
+                            "Frames": []
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "framerate": 35
+    }
+}
