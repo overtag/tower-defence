@@ -2,7 +2,12 @@ import * as PIXI from 'pixi.js';
 
 const level = [
   {
-    types: ['zombie'],
+    types: ['ZJester_mc', 'Patch_mc'],
+    count: 6,
+    interval: 120,
+  },
+  {
+    types: ['Patch_mc'],
     count: 6,
     interval: 120,
   },
