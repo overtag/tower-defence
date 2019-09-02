@@ -5,7 +5,7 @@ import { Jester } from '../enemies/Jester';
 import { Patch } from '../enemies/Patch';
 import { Trap } from '../traps/Trap';
 import { WaveCreator } from '../wave/WaveCreator';
-import { Names } from '../enemies/Names'; 
+import { Names } from '../enemies/Names';
 import { EnemyBase } from '../enemies/EnemyBase';
 
 const traps = [];
@@ -30,19 +30,6 @@ export class Game extends PIXI.Container {
     eventEmitter.on(EVENTS.REMOVE_TRAP, this.removeTrap, this);
   }
 
-<<<<<<< HEAD
-  createEnemy(type) {
-    let enemt = null;
-    switch (type) {
-      case Names.Patch_mc.name:
-        enemy = new EnemyBase()
-        break;
-      case Names.ZJester_mc.name: 
-        enemy = new Jester(this); 
-      break;
-    }
-    const enemy = new Jester(this);
-=======
   getEnemy(type) {
     console.log('type', type);
     switch (type) {
@@ -62,7 +49,6 @@ export class Game extends PIXI.Container {
     console.log('index', index);
     const type = types[index];
     const enemy = this.getEnemy(type);
->>>>>>> 9d587e11573b03d343068160cd3dc761acffa0b0
     enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);
     enemy.init();
     enemies.push(enemy);

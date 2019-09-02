@@ -2,14 +2,11 @@ import * as PIXI from 'pixi.js';
 
 const level = [
   {
-<<<<<<< HEAD
-=======
     types: ['ZJester_mc', 'Patch_mc'],
     count: 6,
     interval: 120,
   },
   {
->>>>>>> 9d587e11573b03d343068160cd3dc761acffa0b0
     types: ['Patch_mc'],
     count: 6,
     interval: 120,
