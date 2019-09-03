@@ -15,7 +15,7 @@ export class BotPanel extends PIXI.Container {
     bg.beginFill(0xffcc00);
     bg.drawRect(0, 0, 640, 100);
     bg.endFill();
-    this.addChild(bg);
+    this.addChild(bg); //
 
     const grT = this.createRectangle().generateCanvasTexture();
     this.trapBtnOne = new Button(grT, grT, grT);

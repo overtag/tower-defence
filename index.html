@@ -1,27 +1,25 @@
-
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>T-D</title>
     <style>
-        html, body { padding: 0px; margin: 0px; height: 100%; overflow: hidden; }
-        canvas { background-color: black;} 
+      html,
+      body {
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        overflow: hidden;
+      }
+      canvas {
+        background-color: black;
+      }
     </style>
-    <script src="./app.min.js" defer></script>
   </head>
 
-  <body onload="init()">
+  <body>
     <div align="center">
-        <canvas id="game-canvas" background="red"></canvas>
+      <canvas id="game-canvas" background="red"></canvas>
     </div>
-   
-    <script>
-      function init() {
-        var canvas = document.getElementById('game-canvas');
-
-        new window.App.App(canvas);
-      }  
-    </script>
-    
+    <script src="./app.min.js" defer></script>
   </body>
 </html>
