@@ -1,21 +1,23 @@
-import * as PIXI from 'pixi.js';
-import * as filters from 'pixi-filters';
-import { config } from './config.js';
-import { Core } from './view/Core.js';
+import * as PIXI from "pixi.js";
+import * as filters from "pixi-filters";
+import { config } from "./config.js";
+import { Core } from "./view/Core.js";
 
 export class App {
   constructor() {
-    var canvas = document.getElementById('game-canvas');
+    var canvas = document.getElementById("game-canvas");
     // filters
     Object.assign(PIXI.filters, filters);
     // sound
-    document.body.style.transform = 'rotate(0deg)';
+    document.body.style.transform = "rotate(0deg)";
 
     this.isPixiLoad = false;
     this.isSoundLoad = false;
 
     PIXI.Graphics.CURVES.adaptive = true;
-    config.isMobile = !!window.navigator.userAgent.match(/iPhone|Android|BlackBerry/i);
+    config.isMobile = !!window.navigator.userAgent.match(
+      /iPhone|Android|BlackBerry/i
+    );
     this.defaultWidth = config.defaultWidth;
     this.defaultHeight = config.defaultHeight;
     this.canvas = canvas;
@@ -23,22 +25,27 @@ export class App {
     this.canvas.height = this.defaultHeight;
     window.canvas = this.canvas;
     PIXI.loader
-      .add('../resources/rake.json')
-      .add('../resources/rake_effect.json')
-      .add('../resources/zombie.json')
-      .add('../resources/ZJester.json')
-      .add('../resources/spritesheet.json')
+      .add("../resources/rake.json")
+      .add("../resources/rake_effect.json")
+      .add("../resources/zombie.json")
+      .add("../resources/ZJester.json")
+      .add("../resources/spritesheet.json")
+      .add("../resources/life.json")
       .load(this.init.bind(this));
   }
 
   init() {
     const stage = new PIXI.Container();
-    const renderer = PIXI.autoDetectRenderer(this.canvas.width, this.canvas.height, {
-      view: this.canvas,
-      transparent: true,
-      antialias: true,
-      autoResize: true,
-    });
+    const renderer = PIXI.autoDetectRenderer(
+      this.canvas.width,
+      this.canvas.height,
+      {
+        view: this.canvas,
+        transparent: true,
+        antialias: true,
+        autoResize: true
+      }
+    );
 
     this.app = { stage, renderer, view: this.canvas };
     config.app = { stage, renderer, view: this.canvas };
@@ -87,7 +94,7 @@ export class App {
     this.core.scale.set(koef);
     this.core.position.set(
       this.app.view.width / 2 - this.core.width / 2,
-      this.app.view.height / 2 - this.core.height / 2,
+      this.app.view.height / 2 - this.core.height / 2
     );
   }
 }

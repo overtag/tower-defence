@@ -1,0 +1,19 @@
+﻿{"frames": {
+
+"Life_mc0000":
+{
+	"frame": {"x":3,"y":3,"w":10,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":12},
+	"sourceSize": {"w":10,"h":12}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.0.107",
+	"image": "life.png",
+	"format": "RGBA8888",
+	"size": {"w":32,"h":32},
+	"scale": "1"
+}
+}
