@@ -1,6 +1,6 @@
-import * as PIXI from 'pixi.js';
-import { config } from '../config';
-import { eventEmitter, EVENTS } from '../events/EventEmitter';
+import * as PIXI from "pixi.js";
+import { config } from "../config";
+import { eventEmitter, EVENTS } from "../events/EventEmitter";
 
 export class HealthBar extends PIXI.Container {
   constructor() {
@@ -23,7 +23,7 @@ export class HealthBar extends PIXI.Container {
     });
     for (let i = 0; i < health; i++) {
       if (this.cache.length <= i) {
-        const hearth = new PIXI.Sprite(PIXI.Texture.fromImage('Life_mc0000'));
+        const hearth = new PIXI.Sprite(PIXI.Texture.fromImage("Life_mc0000"));
         hearth.rotation = Math.PI / 2;
         hearth.anchor.set(0.5, 0.5);
         hearth.scale.set(10, 10);

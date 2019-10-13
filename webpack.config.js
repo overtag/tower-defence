@@ -1,29 +1,25 @@
-const path = require('path');
-
+const path = require("path");
 module.exports = {
-  entry: './src/App.js',
-  mode: 'development',
+  mode: "development",
+  entry: {
+    app: "./src/App.js"
+  },
+
   output: {
-    filename: '../app.min.js',
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist',
+    path: path.join(__dirname, "/build"),
+    filename: "bundle.js"
   },
 
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: "/node_modules/"
+      }
+    ]
   },
   devServer: {
-    overlay: true,
-  },
+    overlay: true
+  }
 };

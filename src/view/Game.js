@@ -1,12 +1,12 @@
-import * as PIXI from 'pixi.js';
-import { config } from '../config';
-import { eventEmitter, EVENTS } from '../events/EventEmitter';
-import { Jester } from '../enemies/Jester';
-import { Patch } from '../enemies/Patch';
-import { Trap } from '../traps/Trap';
-import { WaveCreator } from '../wave/WaveCreator';
-import { Names } from '../enemies/Names';
-import { EnemyBase } from '../enemies/EnemyBase';
+import * as PIXI from "pixi.js";
+import { config } from "../config";
+import { eventEmitter, EVENTS } from "../events/EventEmitter";
+import { Jester } from "../enemies/Jester";
+import { Patch } from "../enemies/Patch";
+import { Trap } from "../traps/Trap";
+import { WaveCreator } from "../wave/WaveCreator";
+import { Names } from "../enemies/Names";
+import { EnemyBase } from "../enemies/EnemyBase";
 
 const traps = [];
 const enemies = [];
@@ -31,12 +31,12 @@ export class Game extends PIXI.Container {
   }
 
   getEnemy(type) {
-    console.log('type', type);
+    console.log("type", type);
     switch (type) {
-      case 'ZJester_mc':
+      case "ZJester_mc":
         return new Jester(this);
         break;
-      case 'Patch_mc':
+      case "Patch_mc":
         return new Patch(this);
         break;
       default:
@@ -46,7 +46,7 @@ export class Game extends PIXI.Container {
 
   createEnemy(types) {
     const index = Math.round((types.length - 1) * Math.random());
-    console.log('index', index);
+    console.log("HELLO WORLD");
     const type = types[index];
     const enemy = this.getEnemy(type);
     enemy.position.set(Math.random() * (config.defaultWidth - enemy.width), 0);

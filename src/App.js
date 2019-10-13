@@ -25,6 +25,7 @@ export class App {
     this.canvas.height = this.defaultHeight;
     window.canvas = this.canvas;
     PIXI.loader
+      .add("../resources/Buttons.json")
       .add("../resources/rake.json")
       .add("../resources/rake_effect.json")
       .add("../resources/zombie.json")

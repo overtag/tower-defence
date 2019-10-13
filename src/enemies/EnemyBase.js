@@ -1,8 +1,8 @@
-import * as PIXI from 'pixi.js';
-import { config } from '../config';
-import { Names } from './Names';
-import { eventEmitter, EVENTS } from '../events/EventEmitter';
-import { HealthBar } from '../health/HealthBar';
+import * as PIXI from "pixi.js";
+import { config } from "../config";
+import { Names } from "./Names";
+import { eventEmitter, EVENTS } from "../events/EventEmitter";
+import { HealthBar } from "../health/HealthBar";
 
 export class EnemyBase extends PIXI.Container {
   constructor(universe) {
@@ -22,7 +22,7 @@ export class EnemyBase extends PIXI.Container {
     const { length, name } = Names[this.type];
     const textureArray = [];
     for (let i = 0; i < length; i++) {
-      listNames.push(`${name}${i < 10 ? '000' : '00'}${i}`);
+      listNames.push(`${name}${i < 10 ? "000" : "00"}${i}`);
       let texture = PIXI.Texture.from(listNames[i]);
       textureArray.push(texture);
     }
@@ -50,7 +50,7 @@ export class EnemyBase extends PIXI.Container {
     this.health = 1;
     this.healthBar.init(this.health);
     this.sprite.gotoAndPlay(Math.floor(Math.random() * 20));
-    this.sprite.alpha = 0;
+
     this.healthBar.y = this.sprite.height * 0.5 - 5 - this.healthBar.height;
   }
 

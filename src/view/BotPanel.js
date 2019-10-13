@@ -1,8 +1,8 @@
-import * as PIXI from 'pixi.js';
-import { config } from '../config';
-import { eventEmitter, EVENTS } from '../events/EventEmitter';
-import { Button } from './Button';
-import { Trap } from '../traps/Trap';
+import * as PIXI from "pixi.js";
+import { config } from "../config";
+import { eventEmitter, EVENTS } from "../events/EventEmitter";
+import { Button } from "./Button";
+import { Trap } from "../traps/Trap";
 
 export class BotPanel extends PIXI.Container {
   constructor(universe) {
@@ -18,7 +18,11 @@ export class BotPanel extends PIXI.Container {
     this.addChild(bg); //
 
     const grT = this.createRectangle().generateCanvasTexture();
-    this.trapBtnOne = new Button(grT, grT, grT);
+    this.trapBtnOne = new Button(
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000")
+    );
     this.trapBtnOne.position.set(10, 10);
     this.addChild(this.trapBtnOne);
 
@@ -26,19 +30,27 @@ export class BotPanel extends PIXI.Container {
       this.startDrag(1);
     };
 
-    this.trapBtnTwo = new Button(grT, grT, grT);
+    this.trapBtnTwo = new Button(
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000")
+    );
     this.trapBtnTwo.position.set(110, 10);
     this.addChild(this.trapBtnTwo);
 
-    this.trapBtnThree = new Button(grT, grT, grT);
+    this.trapBtnThree = new Button(
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000"),
+      PIXI.Texture.fromImage("Rake_mc0000")
+    );
     this.trapBtnThree.position.set(210, 10);
     this.addChild(this.trapBtnThree);
 
-    this.healtTf = new PIXI.Text('1', config.panel_text);
+    this.healtTf = new PIXI.Text("1", config.panel_text);
     this.healtTf.position.set(500, 20);
     this.addChild(this.healtTf);
 
-    this.coinsTf = new PIXI.Text('120', config.panel_text);
+    this.coinsTf = new PIXI.Text("120", config.panel_text);
     this.coinsTf.position.set(500, 60);
     this.addChild(this.coinsTf);
 
@@ -53,7 +65,7 @@ export class BotPanel extends PIXI.Container {
   updateHealth() {
     this.healtTf.text = +this.healtTf.text - 1;
     if (+this.healtTf.text <= 0) {
-      console.log('Game Over');
+      console.log("Game Over");
     }
   }
 
